@@ -6,10 +6,10 @@
   "type": "module",
   "main": "build/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node build/main.js",
     "build:changelog": "npx @discordx/changelog --src src",
     "dev": "ts-node-esm src/main.ts",
-    "start": "tsc && node build/main.js",
+    "start": "node build/main.js",
     "watch": "nodemon --exec ts-node-esm src/main.ts"
   },
   "dependencies": {

@@ -32,7 +32,7 @@ export class ShopCommands {
 
         for (let index = 0; index < getAllItems.length; index++) {
             let item = getAllItems[index];
-            embedDescription += "`[" + item.id + "]`" + ` **-** *${item.emote}* **-** *"${item.name}"* **-** ***${moneyFormatter.format(item.value)}*** **(${(item.available) ? "✅" : "❌"})**\n`
+            embedDescription += `\`[${item.id}]\` **-** *${item.emote}* **-** *"${item.name}"* **-** ***${moneyFormatter.format(item.value)}*** **(${(item.available) ? "✅" : "❌"})**\n`
         }
 
         // Embed da loja
@@ -130,7 +130,7 @@ export class ShopCommands {
         
         for (let index = 0; index < allItems.length; index++) {
             let item = allItems[index].item;
-            embedDescription += "`[" + item.id + "]`" + ` **-** *${item.emote}* **-** *"${item.name}"* ***(Custou ${moneyFormatter.format(item.value)})***\n`;
+            embedDescription += `\`${item.id}\` **-** *${item.emote}* **-** *"${item.name}"* ***(Custou ${moneyFormatter.format(item.value)})***\n`;
         }
 
         // Embed já montado e enviado

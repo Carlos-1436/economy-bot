@@ -131,9 +131,9 @@ export class OwnerEconomyCommands {
             return command.message.reply("❌ *Item com ID passado não foi encontrado.*");
 
         // Callback ao terminar as ações a seguir
-        const doneCallback = async () => {
+        let doneCallback = async () => {
             await this.shoptItemsRepo.save(item);
-            command.message.reply("✅ *Update feito com sucesso!*");
+            await command.message.reply("✅ *Update feito com sucesso!*");
         }
 
         // Escolhas para que faça o update no database de uma coluna do item
@@ -163,13 +163,8 @@ export class OwnerEconomyCommands {
             case "available":
                 if (!["true", "false"].includes(newValue))
                     return command.message.reply("❌ *O valor passado precisa ser 'true' ou 'false'.*");
-                
-                item.available = !!newValue;
+                item.available = (newValue == "true") ? true : false;
                 await doneCallback();
-                break;
-
-            default:
-                command.message.reply("❌ *Opção de mudança escolhida é inválida.*");
                 break;
         }
     }
