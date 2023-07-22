@@ -117,7 +117,7 @@ export class ShopCommands {
         });
     }
 
-    @Slash({ name: "buyed", description: "Veja o que você possui atualmente comprado." })
+    @Slash({ name: "bought", description: "Veja o que você possui atualmente comprado." })
     @SlashGroup("shop")
     @Guard(HasAccount(true))
     async items(interaction: CommandInteraction) {

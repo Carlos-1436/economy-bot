@@ -22,8 +22,8 @@ DBNAME="nome do seu Schema"
 ```
 
 # 🎥 Veja testes com alguns dos comandos existentes
-> Clique **[aqui](https://gyazo.com/1e6706ff0e754da2c622593ba362db45)** para ser redirecionado ao vídeo!<br>
-> **Obs.:** Alguns comandos de `owner` não foram mostrados no vídeo.
+> Clique **[aqui](https://gyazo.com/8d641f03e733eac4f13b633fa9895609)** para ser redirecionado ao vídeo!<br>
+> **Obs.:** Alguns comandos de não foram mostrados no vídeo, existem diversos.
 
 # 💖 Muito obrigado por ler até aqui!
 > Espero que tenha gostado do projeto! Veja mais projetos como esse em meu perfil aqui no github.

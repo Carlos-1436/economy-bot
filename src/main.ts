@@ -32,13 +32,22 @@ bot.once("ready", async () => {
   console.log("[BOT] Iniciado com sucesso!");
 });
 
-bot.on("interactionCreate", (interaction: Interaction) => {
-  bot.executeInteraction(interaction);
+bot.on("interactionCreate", async (interaction: Interaction) => {
+  try {
+    bot.executeInteraction(interaction);
+  } catch {
+    console.log("Ocorreu um erro ao executar um slash command.");
+  }
 });
 
-bot.on("messageCreate", (message: Message) => {
+bot.on("messageCreate", async (message: Message) => {
   if (message.author.bot) return;
-  bot.executeCommand(message);
+
+  try {
+    await bot.executeCommand(message);
+  } catch {
+    console.log("Ocorreu um erro ao executar um simple comand");
+  }
 });
 
 async function run() {
